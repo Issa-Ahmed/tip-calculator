@@ -20,16 +20,16 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body class="bg-light-cyan font-space">
-    <div class="flex items-center justify-center mt-16">
+    <header class="flex items-center justify-center mt-16">
       <img src="./images/logo.svg" alt="" />
-    </div>
+    </header>
     <!-- Calculator -->
     <!-- Flex container -->
-    <div
+    <main
       class="flex md:flex-row flex-col gap-5 md:gap-y-0 gap-y-5 mt-10 mx-auto w-full h-[calc(100%_-_6.5rem)] md:w-[650px] md:h-[335px] bg-white rounded-2xl p-6 justify-center items-center"
     >
       <!-- Flex container 1 -->
-      <div class="h-full w-full md:w-1/2">
+      <section class="h-full w-full md:w-1/2">
         <!-- Bill -->
         <div class="relative">
           <label for="bill" class="block pb-2 text-dark-cyan">Bill</label>
@@ -50,7 +50,10 @@
             >Select Tip %</label
           >
           <!-- Grid container -->
-          <div class="grid grid-cols-2 md:grid-cols-3 w-full gap-4">
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 w-full gap-4"
+            id="selections"
+          >
             <div class="md:h-10 h-12">
               <button
                 class="w-full h-full percentage focus:outline-none text-center text-very-light-cyan font-bold bg-very-dark-cyan cursor-pointer hover transition rounded md:text-base text-2xl"
@@ -100,7 +103,7 @@
         </div>
         <!-- Number of people -->
         <div class="relative mt-4">
-          <label for="bill" class="block pb-2 text-dark-cyan"
+          <label for="people" class="block pb-2 text-dark-cyan"
             >Number of people</label
           >
 
@@ -121,9 +124,9 @@
             Can't be zero
           </p>
         </div>
-      </div>
+      </section>
       <!-- Flex container 2 -->
-      <div
+      <section
         class="relative text-light-cyan md:h-full h-[250px] w-full md:w-1/2 bg-very-dark-cyan rounded-xl"
       >
         <!-- Result -->
@@ -151,8 +154,8 @@
         >
           Reset
         </button>
-      </div>
-    </div>
+      </section>
+    </main>
 
     <script src="./js/app.js"></script>
   </body>

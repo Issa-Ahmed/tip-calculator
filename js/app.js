@@ -57,8 +57,10 @@ function getNumOfPeople() {
 // Calculate the tip
 function calcTip() {
   if (tipPercentage >= 1 || billValue >= 1) {
-    tip = numOfPeople ? ((tipPercentage / 100) * billValue) / numOfPeople : 0;
-    tipEl.textContent = `$${(Math.round(tip * 100) / 100).toFixed(2)}`;
+    tip = numOfPeople ? (tipPercentage / 100) * billValue : 0;
+    tipEl.textContent = `$${(Math.round(tip * 100) / 100 / numOfPeople).toFixed(
+      2
+    )}`;
     total = numOfPeople ? (tip + billValue) / numOfPeople : 0;
     totalEl.textContent = `$${(Math.round(total * 100) / 100).toFixed(2)}`;
   }
